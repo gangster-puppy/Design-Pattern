@@ -1,0 +1,5 @@
+get_filename_component(tarName ${CMAKE_CURRENT_SOURCE_DIR} NAME)
+aux_source_directory(. SRC)
+file(GLOB_RECURSE CURRENT_HEADERS  *.h *.hpp)
+add_definitions(-DUSE_TEMPLATE=1)  
+add_executable(${tarName} ${SRC} ${CURRENT_HEADERS})
